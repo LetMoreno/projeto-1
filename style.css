@@ -1,5 +1,5 @@
 /*TODO: gradiente no banner*/
-/* TODO: translatey no banner?? */
+/* TODO: metodologia BEM */
 /*FIXME: imagem do banner não se ajusta devidamente ao tamanho da tela*/
 
 *{
@@ -16,7 +16,13 @@ html{
     font-family: "Source Sans Pro", sans-serif;
 }
 
-/* MENU E SIDEBAR */
+.button{
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+/* ======== MENU E SIDEBAR ======== */
 
 .menu{
     background-color: #2571B7;
@@ -26,7 +32,7 @@ html{
     z-index: 1;
 }
 
-.menu button{
+.menu__button{
     color: #fff;
     background-color: #002050;
     font-weight: 600;
@@ -34,18 +40,16 @@ html{
     width: 113px;
     padding: 5px;
     font-size: 14px;
-    cursor: pointer;
-    border: none;
     position: fixed;
     top: 10px;
     right: 18px;
-    transition: background-color 0.2s;
+    
 }
-.menu button:hover{
+.menu__button:hover{
     background-color: #1a3662;
 }
 
-.hamburguer-button{
+.hamburger-button{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -59,14 +63,14 @@ html{
     z-index: 1;
 }
 
-.line{
+.hamburger__line{
     width: 100%;
     background-color: #fff;
     height: 2px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
-.sidebar{
+.menu__sidebar{
     background-color: #fff;
     position: fixed;
     width: 220px;
@@ -75,7 +79,7 @@ html{
     transition: transform .5s ease;
 }
 
-.menu-items{
+.sidebar__items{
     transform: translate(-220px);
     display: flex;
     flex-flow: column;
@@ -86,50 +90,50 @@ html{
     transition: transform .5s ease;
 }
 
-.menu-item{
+.sidebar__item{
     margin: 10px;
     transition: color .3s ease;
 }
 
-.menu-item:hover{
+.sidebar__item:hover{
     color: #002050;
 }
 
-.img-menu-desk{
+.sidebar__img--desk{
     display:none;
 }
 
-.img-menu-mobile{
+.sidebar__img--mobile{
     margin: 20px 0 100px 0;
 }
 
-.open .hamburguer-button{
+.menu--open .hamburger-button{
     transform: translate(165px);
 }
 
-.open .line {
+.menu--open .hamburger__line {
     background-color: rgba(0,32,80, 0.8);
 }
 
-.open .line-1{
+.menu--open .hamburger__line-1{
     transform: rotate(45deg) translate(3px, 4px);
 }
 
-.open .line-2{
+.menu--open .hamburger__line-2{
     opacity: 0;
     visibility: hidden;
 }
 
-.open .line-3{
+.menu--open .hamburger__line-3{
     transform: rotate(-45deg) translate(3px, -4px);
 }
 
-.open .sidebar{
+.menu--open .menu__sidebar{
     transform: translate(0);
     box-shadow: 0 0px 20px rgba(0,0,0, 0.5);
 }
 
-.open .menu-items{
+.menu--open .sidebar__items{
     transform: translate(0);
 }
 
@@ -140,14 +144,14 @@ html{
     text-align: center;
 }
 
-.img-wrapper{
+.banner__img-wrapper{
     width: 100%;
     height: 100%;
     background-color: #000;
     overflow: hidden;
 }
 
-.img-wrapper img{
+.banner__img{
     min-width: 100%;
     opacity: .4;
     display: block;
@@ -164,39 +168,69 @@ html{
     }
 }
 
-.banner-content{
+.banner__content{
     width: 100%;
     position: absolute;
-    top: 68%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-shadow: 0 2px 3px rgba(0,0,0,0.4);
 }
 
-.banner button{
+.banner__button{
     width: 188px;
     height: 52px;
-    border: none;
-    margin: 90px 0 140px 0;
+    margin: 90px 0 270px 0;
     background-color: #00A4EF;
     color: #fff;
     font-size: 21px;
     font-weight: 550;
-    transition: background-color 0.2s ease;
+    opacity: 0;
+    animation: bannerUp 1s .9s forwards;
 }
-.banner button:hover{
-    cursor: pointer;
+.banner__button:hover{
     background-color: #4dc3f9;
 }
 
-.banner h1{
+.banner__title{
     color: #fff;
     font-size: 42px;
     font-weight: 550;
     margin-bottom: 30px;
+    opacity: 0;
+    animation: bannerUp 1s 0.5s forwards;
+
 }
-.banner p{
+.banner__paragraph{
     color: #fff;
     font-size: 24px;
+    opacity: 0;
+    animation: bannerUp 1s 0.7s forwards;
 
+}
+
+@keyframes bannerUp {
+    0%{
+        transform: translateY(400px);
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ============= CAIXAS ============= */
+
+.container{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.paragraph{
+    color: #737373;
+    text-align: center;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 10px;
 }

@@ -7,42 +7,63 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
+    
     <title>Lorem Ipsum</title>
 </head>
     <body>
+        <header class="menu">
+            <div class="hamburger-button">
+                <div class="hamburger__line hamburger__line-1"></div>
+                <div class="hamburger__line hamburger__line-2"></div>
+                <div class="hamburger__line hamburger__line-3"></div>
+            </div>
+            <div class="menu__sidebar">
+                <ul class="sidebar__items">
+                    <li><img src="/assets/Grupo 105.png" class="sidebar__img--desk sidebar__item"></li>
+                    <li><img src="/assets/Grupo 124.png" class="sidebar__img--mobile sidebar__item"></li>
+                    <li class="sidebar__item"> <a href="#">Lorem Ipsum</a></li>
+                    <li class="sidebar__item"> <a href="#">Lorem Ipsum</a></li>
+                    <li class="sidebar__item"> <a href="#">Lorem Ipsum</a></li>
+                </ul>
+            </div>
+            <button class="button menu__button">Lorem Ipsum</button>
+        </header>
+        <section class="banner">
+            <div class="banner__img-wrapper">
+                <img src="/assets/ballpen-blur-close-up-461077.png" class="banner__img">
+            </div>
+            <div class="banner__content">
+                <h1 class="banner__title">Lorem ipsum</h1>
+                <p class="banner__paragraph">Lotem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <button class="button banner__button">Lorem ipsum</button>     
+                <div class="banner__footer">
+                    <div class="arrow"></div>  
+                    <img src="/assets/Grupo 105.png">
+                </div>
+            </div>
+        </section>
         <div class="container">
-            <header class="menu">
-                <div class="hamburguer-button">
-                    <div class="line line-1"></div>
-                    <div class="line line-2"></div>
-                    <div class="line line-3"></div>
-                </div>
-                <div class="sidebar">
-                    <ul class="menu-items">
-                        <li><img src="/assets/Grupo 105.png" class="img-menu-desk menu-item"></li>
-                        <li><img src="/assets/Grupo 124.png" class="img-menu-mobile menu-item"></li>
-                        <li class="menu-item"> <a href="#">Lorem Ipsum</a></li>
-                        <li class="menu-item"> <a href="#">Lorem Ipsum</a></li>
-                        <li class="menu-item"> <a href="#">Lorem Ipsum</a></li>
-                    </ul>
-                </div>
-                <button>Lorem Ipsum</button>
-            </header>
-            <section class="banner">
-                <div class="img-wrapper">
-                    <img src="/assets/ballpen-blur-close-up-461077.png">
-                </div>
-                <div class="banner-content">
-                    <h1>Lorem ipsum</h1>
-                    <p>Lotem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                    <button>Lorem ipsum</button>     
-                    <div class="banner-footer">
-                        <div class="arrow"></div>  
-                        <img src="/assets/Grupo 105.png">
-                    </div>
+        <p class="paragraph">Lorem Ipsum dolor sit amet, consectetur 
+            adipiscing elit, sed do eiusmod tempor 
+            incididunt ut labore et dolore magna aliqua.</p>
+            <p class="paragraph">Lorem ipsum dolor sit amet, consectetur 
+                adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua.Quis
+                    ipsum suspendisse ultrices gravida.</p>
+            <section class="boxes">
+                <h1 class="boxes__title"></h1>
+                <p class="boxes__paragraph boxes__subtitle paragraph"></p>
+                <div class="boxes__container">
+                    <div class="box box--blue"></div>
+                    <div class="box box--darkpurple"></div>
+                    <div class="box box--green"></div>
+                    <div class="box box--red"></div>
+                    <div class="box box--purple"></div>
+                    <div class="box box--lightblue"></div>
                 </div>
             </section>
         </div>
+        
         <script src="script.js"></script>
     </body>
 </html>
